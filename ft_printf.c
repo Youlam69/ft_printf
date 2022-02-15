@@ -27,7 +27,7 @@ void	chek(const char *str, va_list arg)
 	else if (*str == '%')
 		ft_putchar_fd('%', 1);
 	else if (*str == 'p')
-	{ls
+	{
 		ft_putstr_fd("0x", 1);
 		prnthex(va_arg(arg, unsigned long int), 'x');
 	}
