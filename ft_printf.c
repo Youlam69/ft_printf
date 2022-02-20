@@ -37,19 +37,19 @@ void	chek(const char *str, va_list arg)
 
 int	ft_printf(const char *str, ...)
 {
-	va_list	argmnt;
+	va_list	arg;
 	int		i;
 
 	i = 0;
-	va_start(argmnt, str);
+	va_start(arg, str);
 	while (str[i])
 	{
 		if (str[i] == '%')
-			chek(&str[++i], argmnt);
+			chek(&str[++i], arg);
 		else
 			ft_putchar_fd(str[i], 1);
 		i++;
 	}
-	va_end(argmnt);
+	va_end(arg);
 	return (g_g);
 }
